@@ -1,0 +1,55 @@
+package oops;
+class StudentReportCard
+{
+	int RollNo;
+	String Name;
+	int m1;
+	int m2;
+	int m3;
+	int m4;
+	int m5;
+	int Total;
+	float Avg;
+	String Grade;
+	
+	StudentReportCard(int RollNo,String Name,int m1,int m2,int m3,int m4,int m5)
+	{
+	this.RollNo= RollNo;
+	this.Name=Name;
+	this.m1=m1;
+	this.m2=m2;
+	this.m3=m3;
+	this.m4=m4;
+	this.m5=m5;
+	this.calcResult();
+}
+	void calcResult()
+	{
+	Total = m1+m2+m3+m4+m5;
+	Avg = Total/5;
+	if( Avg>90)
+		Grade="A+";
+	else if(Avg>80)
+		Grade="A";
+	else if(Avg>70)
+		Grade="B";
+	else if(Avg>60)
+		Grade="C";
+	else if(Avg>50)
+		Grade="D";
+	else
+		Grade="E";
+	}
+void getReportCard()
+{
+	System.out.println(this.RollNo+" "+this.Name+" "+this.m1+" "+this.m2+" "+this.m3+" "+this.m4+" "+this.m5+" "+this.Avg+" "+this.Total+" "+this.Grade);
+}
+}
+public class StudentReportCardSystem {
+	public static void main(String[] args) {
+	StudentReportCard asd= new StudentReportCard(9292,"Keerthi",90,87,93,83,99);
+    asd.getReportCard();
+    
+	}
+}
+
